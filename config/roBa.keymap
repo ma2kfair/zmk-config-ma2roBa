@@ -40,7 +40,7 @@
             key-positions = <12 13>;
         };
 
-        C+A+D {
+        Ctrl_Alt_Del {
             bindings = <&kp LC(LA(DEL))>;
             key-positions = <34 35 9>;
             layers = <0>;
