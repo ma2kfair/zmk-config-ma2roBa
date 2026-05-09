@@ -90,7 +90,8 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 QMARK  &lt 2 INT_HENKAN  &lt_to_layer_0 1 PLUS      &kp SPACE      &lt 2 ENTER                             &mlt 4 MB1
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            // 右回しで下スクロール、左回しで上スクロールにする場合
+            sensor-bindings = <&inc_dec_msc SCROLL_DOWN SCROLL_UP>;
         };
 
         FUNCTION {
