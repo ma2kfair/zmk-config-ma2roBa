@@ -96,7 +96,7 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 QMARK  &lt 2 INT_HENKAN  &lt_to_layer_0 1 BACKSPACE      &kp SPACE       &lt 2 ENTER                             &mlt 4 MB1
             >;
 
-            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_msc MOVE_Y(1000) MOVE_Y(-1000)>;
         };
 
         FUNCTION {
