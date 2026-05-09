@@ -26,11 +26,6 @@
     // };
 };
 
-// マウスホイールの1目盛りを大きく設定します
-&inc_dec_msc {
-    resolution = <20>; 
-};
-
 / {
     combos {
         compatible = "zmk,combos";
