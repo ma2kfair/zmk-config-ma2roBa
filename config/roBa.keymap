@@ -81,7 +81,7 @@
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
 
-            tap-ms = <10>; // 信号の長さを定義
+            tap-ms = <20>; // 信号の長さを定義
         };
     };
 
@@ -117,6 +117,8 @@
 &kp LEFT_SHIFT  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &none    &kp INTERNATIONAL_3          &kp EQUAL  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp MINUS
 &trans          &trans          &trans        &trans           &trans   &trans                       &trans     &trans                                                              &kp SLASH
             >;
+
+            sensor-bindings = <&inc_dec_msc MOVE_X(1) MOVE_X(-1)>;
         };
 
         ARROW {
