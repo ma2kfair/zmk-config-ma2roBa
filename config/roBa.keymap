@@ -81,6 +81,7 @@
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
             tap-ms = <15>;   // 1回の信号の長さ
+            wait_ms = <15>;
         };
     };
 
