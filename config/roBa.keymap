@@ -67,15 +67,20 @@
         };
 
         // 新しく「mlt（マウス・レイヤー・タップ）」という動作を定義
-
         mlt: mouse_layer_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             bindings = <&mo>, <&mkp>;
-
             // ← ここが重要！ホールドでレイヤー(&mo)、タップでマウス(&mkp)
+        };
+
+        // 回転をマウススクロールに変換する定義を追加
+        inc_dec_msc: inc_dec_msc {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
         };
     };
 
