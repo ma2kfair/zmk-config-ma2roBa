@@ -20,7 +20,6 @@
 &trackball {
     // automouse-layer = <4>;
     // scroll-layers = <5>;
-
     // arrows {
     //     layers = <3>;
     //     bindings =
@@ -65,22 +64,21 @@
 
         // 上スクロールマクロ
         // msc_up_wait: msc_up_wait {
-            // compatible = "zmk,behavior-macro";
-            // #binding-cells = <0>;
-            // マクロ全体の動作設定
-            // wait-ms = <0>;
-            // tap-ms = <20>; 
-            // bindingsの中で &wait_ms ではなく、専用の待機命令を使います
-            // bindings = <&msc SCRL_UP>, <&macro_wait_time 100>; 
+        // compatible = "zmk,behavior-macro";
+        // #binding-cells = <0>;
+        // マクロ全体の動作設定
+        // wait-ms = <0>;
+        // tap-ms = <20>; 
+        // bindingsの中で &wait_ms ではなく、専用の待機命令を使います
+        // bindings = <&msc SCRL_UP>, <&macro_wait_time 100>; 
         // };
-
         // 下スクロールマクロ
         // msc_dn_wait: msc_dn_wait {
-            // compatible = "zmk,behavior-macro";
-            // #binding-cells = <0>;
-            // wait-ms = <0>;
-            // tap-ms = <20>;
-            // bindings = <&msc SCRL_DOWN>, <&macro_wait_time 100>;
+        // compatible = "zmk,behavior-macro";
+        // #binding-cells = <0>;
+        // wait-ms = <0>;
+        // tap-ms = <20>;
+        // bindings = <&msc SCRL_DOWN>, <&macro_wait_time 100>;
         // };
     };
 
@@ -105,10 +103,10 @@
         };
 
         // inc_dec_msc: inc_dec_msc {
-            // compatible = "zmk,behavior-sensor-rotate-var";
-            // #sensor-binding-cells = <2>;
-            // 引数（&msc）ではなく、作成したマクロを直接呼び出す
-            // bindings = <&msc_up_wait>, <&msc_dn_wait>;
+        // compatible = "zmk,behavior-sensor-rotate-var";
+        // #sensor-binding-cells = <2>;
+        // 引数（&msc）ではなく、作成したマクロを直接呼び出す
+        // bindings = <&msc_up_wait>, <&msc_dn_wait>;
         // };
 
         encoder_msc_down_up: encoder_msc_down_up {
@@ -116,6 +114,7 @@
             label = "ENCODER_MSC_DOWN_UP";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
             tap-ms = <20>;
         };
     };
@@ -126,7 +125,7 @@
         default_layer {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R                   &kp T                                                             &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                   &kp G             &kp ESCAPE                      &kp ESCAPE      &kp H        &kp J  &kp K      &kp L    &kp EXCLAMATION
+&kp A             &kp S         &kp D         &kp F                   &kp G             &kp LG(TAB)                     &kp ESCAPE      &kp H        &kp J  &kp K      &kp L    &kp EXCLAMATION
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                   &kp B             &kp INT_MUHENKAN                &kp INT_HENKAN  &kp N        &kp M  &kp COMMA  &kp DOT  &kp QUESTION
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 QMARK  &lt 2 INT_HENKAN  &lt_to_layer_0 1 BACKSPACE      &kp SPACE       &lt 2 ENTER                             &mlt 4 MB1
             >;
