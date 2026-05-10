@@ -60,6 +60,23 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        // 上スクロールして20ms休むマクロ
+        msc_up_wait: msc_up_wait {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <15>; // OSが認識できる最小値
+            bindings = <&msc SCRL_UP>, <&wait_ms 20>; // 20msの隙間を作る
+        };
+        // 下スクロールして20ms休むマクロ
+        msc_dn_wait: msc_dn_wait {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <15>;
+            bindings = <&msc SCRL_DOWN>, <&wait_ms 20>;
+        };
     };
 
     behaviors {
@@ -85,8 +102,8 @@
         inc_dec_msc: inc_dec_msc {
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
-            bindings = <&msc>, <&msc>;
-            tap-ms = <18>; // 信号の長さを定義
+            // 引数（&msc）ではなく、作成したマクロを直接呼び出す
+            bindings = <&msc_up_wait>, <&msc_dn_wait>;
         };
     };
 
