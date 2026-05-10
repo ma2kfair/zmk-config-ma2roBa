@@ -67,6 +67,8 @@
             label = "ENCODER_MSC_DOWN_UP";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            tap-ms = <20>;
+        };
 
         // スクロール左右の設定
         encoder_msc_LR: encoder_msc_LR {
@@ -74,7 +76,6 @@
             label = "ENCODER_MSC_LR";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
-
             tap-ms = <20>;
         };
     };
