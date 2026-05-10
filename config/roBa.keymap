@@ -61,21 +61,24 @@
             label = "TO_LAYER_0";
         };
 
-        // 上スクロールして20ms休むマクロ
+        // 上スクロールマクロ
         msc_up_wait: msc_up_wait {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            // マクロ全体の動作設定
             wait-ms = <0>;
-            tap-ms = <15>; // OSが認識できる最小値
-            bindings = <&msc SCRL_UP>, <&wait_ms 20>; // 20msの隙間を作る
+            tap-ms = <20>; 
+            // bindingsの中で &wait_ms ではなく、専用の待機命令を使います
+            bindings = <&msc SCRL_UP>, <&macro_wait_time 20>; 
         };
-        // 下スクロールして20ms休むマクロ
+
+        // 下スクロールマクロ
         msc_dn_wait: msc_dn_wait {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
-            tap-ms = <15>;
-            bindings = <&msc SCRL_DOWN>, <&wait_ms 20>;
+            tap-ms = <20>;
+            bindings = <&msc SCRL_DOWN>, <&macro_wait_time 20>;
         };
     };
 
