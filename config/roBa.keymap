@@ -128,7 +128,7 @@
             bindings = <
 &trans  &trans  &kp F2   &kp F3   &kp F4                              &kp LESS_THAN    &kp GREATER_THAN  &kp SEMICOLON    &kp JP_COLON      &kp JP_QUOTE
 &trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans      &trans         &kp JP_LBRACKET  &kp JP_RBRACKET   &kp JP_ASTERISK  &kp JP_TILDE      &kp JP_DQUOTE
-&trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans      JP_AT          &kp JP_LPAREN    &kp JP_RPAREN     &kp JP_YEN       &kp JP_AMPERSAND  &kp PERCENT
+&trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans      &JP_AT         &kp JP_LPAREN    &kp JP_RPAREN     &kp JP_YEN       &kp JP_AMPERSAND  &kp PERCENT
 &trans  &trans  &trans   &trans   &trans   &trans      &kp BACKSPACE  &kp DELETE                                                            &trans
             >;
 
