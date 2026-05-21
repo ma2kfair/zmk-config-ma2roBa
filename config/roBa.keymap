@@ -120,10 +120,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                      &kp T                                                            &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                      &kp G            &kp ESC                         &kp ESC         &kp H        &kp J  &kp K      &kp L    &kp MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                      &kp B            &kp LG(TAB)                     &kp INT_HENKAN  &kp N        &kp M  &kp COMMA  &kp DOT  &kp EXCLAMATION
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 QUESTION  &lt 3 LG(SLASH)  &lt_to_layer_0 1 BACKSPACE      &kp SPACE       &lt 2 ENTER                             &mlt 4 MB1
+&lt 6 Q     &kp W         &kp E         &kp R               &kp T                                                            &kp Y        &kp U  &kp I      &kp O         &kp P
+&kp A       &kp S         &kp D         &kp F               &kp G            &kp ESC                         &kp ESC         &kp H        &kp J  &kp K      &kp L         &kp MINUS
+&kp Z       &kp X         &kp C         &kp V               &kp B            &kp LG(TAB)                     &kp INT_HENKAN  &kp N        &kp M  &kp COMMA  &lt 4 PERIOD  &kp EXCLAMATION
+&kp LSHIFT  &kp LEFT_WIN  &kp LEFT_ALT  &mt LCTRL QUESTION  &lt 3 LG(SLASH)  &lt_to_layer_0 1 BACKSPACE      &kp SPACE       &lt 2 ENTER                                  &kp RSHIFT
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -162,9 +162,9 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                        &trans    &trans  &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans    &trans  &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans    &trans  &mkp MB3  &mkp MB2  &mkp MB1
+&trans  &trans  &trans  &trans  &trans                        &trans    &trans    &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans    &trans    &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans    &mkp MB2  &mkp MB1  &trans  &mkp MB3
 &trans  &trans  &trans  &trans  &trans  &trans      &mkp MB4  &mkp MB5                              &trans
             >;
         };
