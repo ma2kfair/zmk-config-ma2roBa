@@ -113,6 +113,19 @@
 
             tap-ms = <20>;
         };
+
+        st: scroll_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Scroll / Tap";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            hold-while-undecided;
+        };
+};
+
     };
 
     keymap {
@@ -120,7 +133,7 @@
 
         default_layer {
             bindings = <
-&lt 6 Q     &kp W         &kp E         &kp R               &kp T                                                            &kp Y        &kp U  &kp I      &kp O       &kp P
+&lt 6 Q     &kp W         &kp E         &kp R               &kp T                                                            &kp Y        &kp U  &kp I      &kp O       &st 5 P
 &kp A       &kp S         &kp D         &kp F               &kp G            &kp ESC                         &kp ESC         &kp H        &kp J  &kp K      &kp L       &kp MINUS
 &kp Z       &kp X         &kp C         &kp V               &kp B            &kp LG(TAB)                     &kp INT_HENKAN  &kp N        &kp M  &kp COMMA  &kp PERIOD  &mt RSHIFT EXCLAMATION
 &kp LSHIFT  &kp LEFT_WIN  &kp LEFT_ALT  &mt LCTRL QUESTION  &lt 3 LG(SLASH)  &lt_to_layer_0 1 BACKSPACE      &kp SPACE       &lt 2 ENTER                                &mlt 4 MB1
