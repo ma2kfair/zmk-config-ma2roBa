@@ -59,6 +59,13 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        Under_Bar: Under_Bar {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp INT_MUHENKAN &kp PERCENT &kp INT_HENKAN>;
+            label = "UNDER_BAR";
+        };
     };
 
     behaviors {
@@ -153,10 +160,10 @@
 
         ARROW {
             bindings = <
-&kp LC(Q)  &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)                                 &kp LC(Y)  &trans    &trans    &trans     &trans
-&kp LC(A)  &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp LC(G)  &trans                 &trans  &kp LC(H)  &trans    &kp UP    &trans     &trans
-&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)  &kp LS(LG(RIGHT))      &trans  &kp HOME   &kp LEFT  &kp DOWN  &kp RIGHT  &kp END
-&trans     &trans     &trans     &trans     &trans     &trans                 &trans  &trans                                    &trans
+&kp LC(Q)  &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)                                 &kp LC(Y)  &Under_Bar  &trans    &trans     &trans
+&kp LC(A)  &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp LC(G)  &trans                 &trans  &kp LC(H)  &trans      &kp UP    &trans     &trans
+&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)  &kp LS(LG(RIGHT))      &trans  &kp HOME   &kp LEFT    &kp DOWN  &kp RIGHT  &kp END
+&trans     &trans     &trans     &trans     &trans     &trans                 &trans  &trans                                      &trans
             >;
         };
 
