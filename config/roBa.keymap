@@ -37,6 +37,11 @@
     quick-tap-ms = <0>;
 };
 
+&trackball {
+    // automouse-layer = <4>;   // 必要なら自動でマウス層へ
+    scroll-layers = <5>;       // このレイヤーでトラックボールをスクロールにする
+};
+
 / {
     combos {
         compatible = "zmk,combos";
